@@ -1,135 +1,88 @@
-[![hugo](https://user-images.githubusercontent.com/43764894/223559747-e9d7f19d-91bf-46a9-a0cb-8d6a40d3cfa3.png)](https://ntl.fyi/3P9w1mr)
+<p align="center" style="padding-top:20px">
+ <img width="100px" src="images/logo-tailbliss-round.svg" align="center" alt="GitHub Readme Stats" />
+ <h1 align="center">TailBliss</h1>
+ <p align="center">TailBliss is an opinionated Hugo Starter with Tailwind CSS 3.2 and Alpine.js with light/dark modes.</p>
+</p>
+  <p align="center">
+    <a href="https://github.com/nusserstudios/tailbliss/actions/">
+      <img alt="Tests Passing" src="https://github.com/nusserstudios/tailbliss/actions/workflows/codeql.yml/badge.svg" />
+    </a>
+    <a href="https://github.com/nusserstudios/tailbliss/contributors">
+      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/nusserstudios/tailbliss?color=0088ff" />
+    </a>
+    <a href="https://github.com/nusserstudios/tailbliss/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/nusserstudios/tailbliss?color=fc0b03" />
+    </a>
+    <a href="https://github.com/nusserstudios/tailbliss/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/nusserstudios/tailbliss?color=f97316" />
+    </a>
+    <br>
+    <br>
+    <a href="https://gohugo.io/">
+      <img src="https://img.shields.io/badge/Hugo%20-0.105.0%20-gray.svg?colorA=c9177e&colorB=FF4088&style=for-the-badge"/>
+    </a>
+    <a href="https://tailwindcss.com/">
+      <img src="https://img.shields.io/badge/TailwindCSS%20-V3-gray.svg?colorA=0284c7&colorB=38bdf8&style=for-the-badge"/>
+    </a>
+    <a href="https://alpinejs.dev/">
+      <img src="https://img.shields.io/badge/Alpine.js%20-V3-gray.svg?colorA=68a5af&colorB=77c1d2&style=for-the-badge"/>
+    </a>
+  </p>
 
-# Hugo Quickstart Template   
+  <p align="center">
+    <a href="https://tailbliss.netlify.app/">View Demo</a>
+    ·
+    <a href="https://github.com/nusserstudios/tailbliss/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/nusserstudios/tailbliss/discussions/categories/feature-request">Request Feature</a>
+    ·
+    <a href="https://github.com/nusserstudios/tailbliss/discussions/categories/general">Ask Question</a>
+  </p>
+</p>
 
-This is a bare-bones Hugo project that has everything you need to quickly deploy it to [Netlify](https://netlify.com). 
+<p align="center">
+<img src="https://raw.githubusercontent.com/nusserstudios/tailbliss/main/images/tailbliss-lighthouse-11-03-22.png" alt="Tailbliss Google Lighthouse Score" style="margin: 25px auto; max-width: 830px" width="100%" height="" />
+</p>
 
-Hate reading, here's a video: https://youtu.be/t-tsRxxYdpk
+**Install to VS Code with:**  
+`git clone git@github.com:nusserstudios/tailbliss your-name`
 
-Love reading, here's blog post: https://www.netlify.com/blog/deploy-your-hugo-app-quick/
+##### Install with NPM 
+`npm install`
+##### Install with Yarn
+`yarn`
 
-## Table of Contents:
+**To start developing:**
+##### Develop with NPM 
+`npm run start`
+##### Develop with Yarn
+`yarn start`
 
-- [Quick Setup + Deploy Option](#quick-setup--deploy-option)
-- [Regular Setup](#regular-setup)
-  - [Cloning + Install Packages](#1-cloning--install-packages)
-  - [Deploying](#2-deploying)
-- [Styling](#styling)
-  - [Notes on Styling](#notes-on-styling)
-  - [Remove Styling](#remove-styling)
-- [Hugo + Netlify Resources](#hugo--netlify-resources)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-- [Want to learn more?](#want-to-learn-more)
+**To generate the site HTML:**
+##### Build with NPM 
+`npm run build`
+##### Build with Yarn
+`yarn build`
 
-## Quick Setup + Deploy Option
+**npm run start** will run two commands parallel:  
+`npx tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch`
 
-Click this button and it will help you create a new repo, create a new Netlify project, and deploy!
+Has paginated Categories and Tags. Markdown files will automatically convert images put into `/assets` folder to .webp images. 
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/hugo-quickstart)
+## Image shortcodes for webp as well.
+{{< imgc src="img-name.jpg" alt="Place alt text here." >}}
 
-## Regular Setup
+<a href="https://www.buymeacoffee.com/nusserstudios" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-blue.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
- ### 1. Cloning + Running Locally
-
-  - Clone this repo with one of these options:
-
-    - Click the 'Use this template' button at the top of the page
-    - Or via the command line `git clone https://github.com/netlify-templates/hugo-quickstart`
-
- - Start the Hugo sever & check it out:
-
-   - `hugo server -D`
-   - go to [http://localhost:1313/](http://localhost:1313/)
-
-  > Alternatively, you can run this locally with [the Netlify CLI](https://docs.netlify.com/cli/get-started/)'s by running the `netlify dev` command for more options like receiving a live preview to share (`netlify dev --live`) and the ability to test [Netlify Functions](https://www.netlify.com/products/functions) and [redirects](https://docs.netlify.com/routing/redirects/). 
-
-  ### 2. Deploying
-  - Install the Netlify CLI globally `npm install netlify-cli -g`
-    
-  - Run `hugo`
-
-  - Then use the `netlify deploy` for a deploy preview link or `netlify deploy --prod` to deploy to production
-
-  Here are a few other ways you can deploy this template:
-    
-  - Use the Netlify CLI's create from template command `netlify sites:create-template hugo-quickstart` which will create a repo, Netlify project, and deploy it
-    
-  - If you want to utilize continuous deployment through GitHub webhooks, run the Netlify command `netlify init` to create a new project based on your repo or `netlify link` to connect your repo to an existing project
-
-## Styling
-
-We've added some modern styling to this template using Sass within an external stylesheet, this will allow you to easily remove our styling and add in your own. 
-
-If you decide that you want to keep our styling you can review our style notes below. 
-
-### Notes on Styling
-
-The variables below give you the ability to change the gradient colors of the blobs and are interpolated into the URL string of the background-img within the body. 
-
-```css
-// Controls the blob blur gradient colors within the main tag's svg
---top-right-blur-1: #2ebc92;
---top-right-blur-2: #ecbb50;
---bttm-left-blur-1: #ff3e89;
---bttm-left-blur-2: #0095cc;
-```
-
-## Remove Styling
-
-If you decide that our styling is not for you, all you'll need to do is remove the [demo-styling.css](https://github.com/netlify-templates/hugo-quickstart/blob/main/themes/netlify-basic/static/css/demo-styling.css) file. 
-
-## Hugo + Netlify Resources
-
-Here are some resources to help you on your Hugo + Netlify coding fun!
-
-- [Hugo on Netlify Integration Page](https://ntl.fyi/3P9w1mr)
+## Form
+To use the form, visit [FormSubmit.Co](https://formsubmit.co/). Locate the contact form in "content/contact.md", and update the form action with the email address you want on this line: **action="https://formsubmit.co/your@email.com" method="POST"**
 
 
-Hope this template helps :) Happy coding 👩🏻‍💻!
+## Credits
+4044ever - Original Theme
+https://github.com/4044ever/Hugo-Tailwind-3.0.git
 
----
+Jan Heise - Alpine.js Navbar
+https://github.com/jan-heise/responsive-navbar-with-dropdown
 
-## Testing
-
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall cypress
-```
+Made for Hacktoberfest, with ❤️ by NusserStudios.
